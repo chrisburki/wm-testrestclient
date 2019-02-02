@@ -37,7 +37,7 @@ public class TestrestclientController {
     public Customer findCustomer(@RequestParam("key") String key) {
 
         final String name = "Nia Burki";
-        String addressUrl = "http://" + wmAddressHost + wmAddressPort;
+        String addressUrl = "http://" + wmAddressHost + ":" + wmAddressPort + "/addresses?key=aa";
 
         Address address = restTemplate.getForObject(
                 addressUrl, Address.class);
